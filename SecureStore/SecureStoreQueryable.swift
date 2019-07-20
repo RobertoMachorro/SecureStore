@@ -36,7 +36,7 @@ public struct GenericPasswordQueryable {
 	let service: String
 	let accessGroup: String?
 	
-	init(service: String, accessGroup: String? = nil) {
+	public init(service: String, accessGroup: String? = nil) {
 		self.service = service
 		self.accessGroup = accessGroup
 	}
@@ -64,6 +64,15 @@ public struct InternetPasswordQueryable {
 	let securityDomain: String
 	let internetProtocol: InternetProtocol
 	let internetAuthenticationType: InternetAuthenticationType
+
+	public init(server: String, port: Int, path: String, securityDomain: String, internetProtocol: InternetProtocol, internetAuthenticationType: InternetAuthenticationType) {
+		self.server = server
+		self.port = port
+		self.path = path
+		self.securityDomain = securityDomain
+		self.internetProtocol = internetProtocol
+		self.internetAuthenticationType = internetAuthenticationType
+	}
 }
 
 extension InternetPasswordQueryable: SecureStoreQueryable {
