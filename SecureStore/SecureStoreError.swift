@@ -26,12 +26,23 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-#import <Cocoa/Cocoa.h>
+import Foundation
 
-//! Project version number for SecureStore.
-FOUNDATION_EXPORT double SecureStoreVersionNumber;
+public enum SecureStoreError: Error {
+	case string2DataConversionError
+	case data2StringConversionError
+	case unhandledError(message: String)
+}
 
-//! Project version string for SecureStore.
-FOUNDATION_EXPORT const unsigned char SecureStoreVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <SecureStore/PublicHeader.h>
+extension SecureStoreError: LocalizedError {
+	public var errorDescription: String? {
+		switch self {
+		case .string2DataConversionError:
+			return NSLocalizedString("String to Data conversion error", comment: "")
+		case .data2StringConversionError:
+			return NSLocalizedString("Data to String conversion error", comment: "")
+		case .unhandledError(let message):
+			return NSLocalizedString(message, comment: "")
+		}
+	}
+}

@@ -10,6 +10,11 @@
 		E9315E8322E376F6004F4048 /* SecureStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9315E7922E376F6004F4048 /* SecureStore.framework */; };
 		E9315E8822E376F6004F4048 /* SecureStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E8722E376F6004F4048 /* SecureStoreTests.swift */; };
 		E9315E8A22E376F6004F4048 /* SecureStore.h in Headers */ = {isa = PBXBuildFile; fileRef = E9315E7C22E376F6004F4048 /* SecureStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9315E9422E37AB5004F4048 /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E9322E37AB5004F4048 /* SecureStore.swift */; };
+		E9315E9622E37B46004F4048 /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E9522E37B46004F4048 /* SecureStoreError.swift */; };
+		E9315E9822E37B9D004F4048 /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E9722E37B9D004F4048 /* SecureStoreQueryable.swift */; };
+		E9315E9A22E37BD9004F4048 /* InternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E9922E37BD9004F4048 /* InternetProtocol.swift */; };
+		E9315E9C22E37C2D004F4048 /* InternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E9B22E37C2D004F4048 /* InternetAuthenticationType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		E9315E8222E376F6004F4048 /* SecureStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9315E8722E376F6004F4048 /* SecureStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreTests.swift; sourceTree = "<group>"; };
 		E9315E8922E376F6004F4048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9315E9322E37AB5004F4048 /* SecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
+		E9315E9522E37B46004F4048 /* SecureStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
+		E9315E9722E37B9D004F4048 /* SecureStoreQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreQueryable.swift; sourceTree = "<group>"; };
+		E9315E9922E37BD9004F4048 /* InternetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetProtocol.swift; sourceTree = "<group>"; };
+		E9315E9B22E37C2D004F4048 /* InternetAuthenticationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAuthenticationType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,11 @@
 			children = (
 				E9315E7C22E376F6004F4048 /* SecureStore.h */,
 				E9315E7D22E376F6004F4048 /* Info.plist */,
+				E9315E9322E37AB5004F4048 /* SecureStore.swift */,
+				E9315E9722E37B9D004F4048 /* SecureStoreQueryable.swift */,
+				E9315E9522E37B46004F4048 /* SecureStoreError.swift */,
+				E9315E9922E37BD9004F4048 /* InternetProtocol.swift */,
+				E9315E9B22E37C2D004F4048 /* InternetAuthenticationType.swift */,
 			);
 			path = SecureStore;
 			sourceTree = "<group>";
@@ -80,8 +95,8 @@
 		E9315E8622E376F6004F4048 /* SecureStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				E9315E8722E376F6004F4048 /* SecureStoreTests.swift */,
 				E9315E8922E376F6004F4048 /* Info.plist */,
+				E9315E8722E376F6004F4048 /* SecureStoreTests.swift */,
 			);
 			path = SecureStoreTests;
 			sourceTree = "<group>";
@@ -148,6 +163,7 @@
 				TargetAttributes = {
 					E9315E7822E376F6004F4048 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					E9315E8122E376F6004F4048 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9315E9A22E37BD9004F4048 /* InternetProtocol.swift in Sources */,
+				E9315E9C22E37C2D004F4048 /* InternetAuthenticationType.swift in Sources */,
+				E9315E9422E37AB5004F4048 /* SecureStore.swift in Sources */,
+				E9315E9622E37B46004F4048 /* SecureStoreError.swift in Sources */,
+				E9315E9822E37B9D004F4048 /* SecureStoreQueryable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +361,8 @@
 		E9315E8E22E376F6004F4048 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -359,6 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.unpluggedideas.SecureStore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -366,6 +389,7 @@
 		E9315E8F22E376F6004F4048 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -392,6 +416,7 @@
 		E9315E9122E376F6004F4048 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U4D2A4LEAL;
@@ -410,6 +435,7 @@
 		E9315E9222E376F6004F4048 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U4D2A4LEAL;
