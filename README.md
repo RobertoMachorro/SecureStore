@@ -19,12 +19,12 @@ Check the tests for call examples, most are very atomic.
 
 ## Project Status
 
-Currently, the code is in Framework form based of pristine code (no changes), it builds for macOS and passes all but 2 tests. The original source passes all tests under iOS.
+Currently, the project is ready to use and defaults to macOS builds.
 
-## Roadmap
+## Pending
 
-* Fix issues so that all tests pass.
-* Add full support for [SecCopyErrorMessageString](https://developer.apple.com/documentation/security/1542001-security_framework_result_codes).
+* iOS Target
+* macOS and passes all but 2 tests. The original source passes all tests under iOS.
 
 ## Changes from Original Source
 
