@@ -15,6 +15,7 @@
 		E9315E9822E37B9D004F4048 /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E9722E37B9D004F4048 /* SecureStoreQueryable.swift */; };
 		E9315E9A22E37BD9004F4048 /* InternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E9922E37BD9004F4048 /* InternetProtocol.swift */; };
 		E9315E9C22E37C2D004F4048 /* InternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9315E9B22E37C2D004F4048 /* InternetAuthenticationType.swift */; };
+		E9E5818D22E7EA6B00FAC214 /* SecureStoreMobile.h in Headers */ = {isa = PBXBuildFile; fileRef = E9E5818B22E7EA6B00FAC214 /* SecureStoreMobile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,9 @@
 		E9315E9722E37B9D004F4048 /* SecureStoreQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreQueryable.swift; sourceTree = "<group>"; };
 		E9315E9922E37BD9004F4048 /* InternetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetProtocol.swift; sourceTree = "<group>"; };
 		E9315E9B22E37C2D004F4048 /* InternetAuthenticationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAuthenticationType.swift; sourceTree = "<group>"; };
+		E9E5818922E7EA6A00FAC214 /* SecureStoreMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SecureStoreMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9E5818B22E7EA6B00FAC214 /* SecureStoreMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureStoreMobile.h; sourceTree = "<group>"; };
+		E9E5818C22E7EA6B00FAC214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9E5818622E7EA6A00FAC214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +76,7 @@
 			children = (
 				E9315E7B22E376F6004F4048 /* SecureStore */,
 				E9315E8622E376F6004F4048 /* SecureStoreTests */,
+				E9E5818A22E7EA6B00FAC214 /* SecureStoreMobile */,
 				E9315E7A22E376F6004F4048 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +86,7 @@
 			children = (
 				E9315E7922E376F6004F4048 /* SecureStore.framework */,
 				E9315E8222E376F6004F4048 /* SecureStoreTests.xctest */,
+				E9E5818922E7EA6A00FAC214 /* SecureStoreMobile.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +114,15 @@
 			path = SecureStoreTests;
 			sourceTree = "<group>";
 		};
+		E9E5818A22E7EA6B00FAC214 /* SecureStoreMobile */ = {
+			isa = PBXGroup;
+			children = (
+				E9E5818B22E7EA6B00FAC214 /* SecureStoreMobile.h */,
+				E9E5818C22E7EA6B00FAC214 /* Info.plist */,
+			);
+			path = SecureStoreMobile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -109,6 +131,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9315E8A22E376F6004F4048 /* SecureStore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9E5818422E7EA6A00FAC214 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9E5818D22E7EA6B00FAC214 /* SecureStoreMobile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +181,24 @@
 			productReference = E9315E8222E376F6004F4048 /* SecureStoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E9E5818822E7EA6A00FAC214 /* SecureStoreMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9E5819022E7EA6B00FAC214 /* Build configuration list for PBXNativeTarget "SecureStoreMobile" */;
+			buildPhases = (
+				E9E5818422E7EA6A00FAC214 /* Headers */,
+				E9E5818522E7EA6A00FAC214 /* Sources */,
+				E9E5818622E7EA6A00FAC214 /* Frameworks */,
+				E9E5818722E7EA6A00FAC214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecureStoreMobile;
+			productName = SecureStoreMobile;
+			productReference = E9E5818922E7EA6A00FAC214 /* SecureStoreMobile.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,6 +216,9 @@
 					E9315E8122E376F6004F4048 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					E9E5818822E7EA6A00FAC214 = {
+						CreatedOnToolsVersion = 10.3;
+					};
 				};
 			};
 			buildConfigurationList = E9315E7322E376F6004F4048 /* Build configuration list for PBXProject "SecureStore" */;
@@ -184,6 +235,7 @@
 			targets = (
 				E9315E7822E376F6004F4048 /* SecureStore */,
 				E9315E8122E376F6004F4048 /* SecureStoreTests */,
+				E9E5818822E7EA6A00FAC214 /* SecureStoreMobile */,
 			);
 		};
 /* End PBXProject section */
@@ -197,6 +249,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E9315E8022E376F6004F4048 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9E5818722E7EA6A00FAC214 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,6 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9315E8822E376F6004F4048 /* SecureStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9E5818522E7EA6A00FAC214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +517,61 @@
 			};
 			name = Release;
 		};
+		E9E5818E22E7EA6B00FAC214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = U4D2A4LEAL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SecureStoreMobile/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.SecureStoreMobile;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9E5818F22E7EA6B00FAC214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = U4D2A4LEAL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SecureStoreMobile/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.SecureStoreMobile;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -477,6 +598,15 @@
 			buildConfigurations = (
 				E9315E9122E376F6004F4048 /* Debug */,
 				E9315E9222E376F6004F4048 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9E5819022E7EA6B00FAC214 /* Build configuration list for PBXNativeTarget "SecureStoreMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9E5818E22E7EA6B00FAC214 /* Debug */,
+				E9E5818F22E7EA6B00FAC214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
